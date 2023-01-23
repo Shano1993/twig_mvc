@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ma super app home page{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="/assets/css/home.css">{% endblock %}
+{% block body %}
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, deserunt eveniet fugiat, fugit hic ipsam iure nam
+        possimus similique sint totam ullam! Animi, dolores inventore maxime nobis quae rerum suscipit.
+    </p>
+
+    <div class="hello">
+        Hello {{ user }}
+    </div>
+
+    {% include '_partials/_unordered_list.html.twig' with {items: hobbies, class: 'hobbies'} %}
+    {% include '_partials/_unordered_list.html.twig' with {items: sleep} %}
+
+    <div class="amount">
+        {{ amount|number_format }}
+    </div>
+{% endblock %}

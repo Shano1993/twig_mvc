@@ -1,0 +1,10 @@
+{% if items is defined %}
+    {% set cssClass = class is defined ? class : 'default-class' %}
+    <div class="{{ cssClass }}">
+        <ul>
+            {% for item in items %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
